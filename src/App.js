@@ -38,11 +38,14 @@ class App extends Component {
   componentDidMount(){
     this.getTodos();
   }
+  handleAddTodo(){
+    this.getTodos()
+  }
 
   render() {
     return (
       <div className="App col-xs-12">
-        <TodoAdd/>
+        <TodoAdd addProject={this.handleAddTodo.bind(this)}/>
         <Todo todos={this.state.todos} />
       </div>
     );
