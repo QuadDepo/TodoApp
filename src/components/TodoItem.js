@@ -8,10 +8,9 @@ class TodoItem extends Component {
   }
   render() {
     return (
-        <li>
-
-          {this.props.todo.todoName}
-          <a href="#" onClick={this.deleteTodo.bind(this, this.props.todo.id)}>  <i className="fa fa-check"></i></a>
+        <li id={this.props.todo.id} className="todoItem">
+          <button className="pull-left btn btn-success btn-circle" onClick={this.deleteTodo.bind(this, this.props.todo.id)}>  <i className="fa fa-check"></i></button>
+          <span className="name">{this.props.todo.todoName}</span>
         </li>
     );
   }

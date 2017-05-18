@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 
+
 class TodoAdd extends Component {
   constructor(props) {
     super(props);
@@ -40,8 +41,12 @@ class TodoAdd extends Component {
     return (
       <div>
       <form onSubmit={this.onTodoAdd.bind(this)}>
-        <input type="text" ref="todo" />
-        <input type="submit" value="submit" />
+        <div className="input-group">
+          <input className="form-control addForm" type="text" ref="todo" />
+          <span className="input-group-btn ">
+            <button className="btn btn-success btn-circle addBtn" type="submit" value=""><i className="fa fa-plus"></i></button>
+          </span>
+          </div>
         </form>
       </div>
     )

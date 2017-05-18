@@ -19,7 +19,9 @@ class Todo extends Component {
     }
     return (
       <div className="Todo">
-        {todoItems}
+        <ul>
+          {todoItems}
+        </ul>
       </div>
     );
   }
