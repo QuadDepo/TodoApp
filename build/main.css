@@ -13,7 +13,11 @@ App Styles
   margin-top: 50px;
 }
 
-
+input[type="text"], textarea {
+outline: none;
+box-shadow:none !important;
+border:1px solid #ccc !important;
+}
 
 
 /*

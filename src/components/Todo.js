@@ -5,8 +5,8 @@ import TodoCheck from './TodoCheck';
 
 
 class Todo extends Component {
-  deleteTodo(id){
-    this.props.onDelete(id);
+  deleteTodo(id, name){
+    this.props.onDelete(id, name);
   }
   render() {
     let todoItems;
