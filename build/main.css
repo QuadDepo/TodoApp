@@ -32,7 +32,6 @@ TodoAdd Styles
   text-align: center;
   padding: 6px 0;
   font-size: 12px;
-
   line-height: 1.428571429;
   border-radius: 50% !important;
 }
@@ -41,10 +40,7 @@ TodoAdd Styles
 }
 
 .addBtn{
-  width: 60px;
-  height: 60px;
   margin-left: -40px !important;
-    margin-top: -5px;
 }
 .addForm{
   border-radius: 100px !important;
