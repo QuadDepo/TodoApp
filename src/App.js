@@ -41,12 +41,28 @@ class App extends Component {
   handleAddTodo(){
     this.getTodos()
   }
+  handleDeleteTodo(id){
+    $.ajax({
+      // https://jsonplaceholder.typicode.com/todos
+      url: 'http://localhost:3004/todos/' + id,
+      type: 'DELETE',
+      dataType:'json',
+      cache: false,
+      success: function(data){
+        console.log(data);
+        this.getTodos();
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log(err);
+      }
+    });
+  }
 
   render() {
     return (
       <div className="App col-xs-12">
         <TodoAdd addProject={this.handleAddTodo.bind(this)}/>
-        <Todo todos={this.state.todos} />
+        <Todo onDelete={this.handleDeleteTodo.bind(this)} todos={this.state.todos} />
       </div>
     );
   }

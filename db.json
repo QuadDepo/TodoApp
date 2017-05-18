@@ -1,24 +1,8 @@
 {
   "todos": [
     {
-      "id": 0,
-      "todoName": "Create react app"
-    },
-    {
-      "todoName": "Create awesome appps",
-      "id": 1
-    },
-    {
-      "todoName": "Create awesomasdfadsfe appps",
-      "id": 2
-    },
-    {
-      "todoName": "And more Awesome sutff",
-      "id": 3
-    },
-    {
-      "todoName": "ASDFASDF",
-      "id": 4
+      "todoName": "hihi",
+      "id": 6
     }
   ]
 }
