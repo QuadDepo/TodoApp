@@ -4,7 +4,7 @@ import './App.css';
 
 import Todo from './components/Todo'
 import TodoAdd from './components/TodoAdd'
-import TodoModal from './components/TodoModal';
+
 
 
 
@@ -14,10 +14,6 @@ class App extends Component {
     super(props);
     this.state = {
       todos: [],
-      action: false,
-      info:{
-        title: "hey",
-      }
     }
   }
   getTodos(){
@@ -66,17 +62,33 @@ class App extends Component {
       }
     });
   }
-  modalAction(){
-    this.setState({action: true});
+  handleEditTodo(name, id){
+    // console.log(name + " " + id);
+    let newTodoName ={
+      "todoName": name
+    }
+    $.ajax({
+      // https://jsonplaceholder.typicode.com/todos
+      url: 'http://localhost:3004/todos/' + id,
+      type: 'PUT',
+      dataType:'json',
+      data: newTodoName,
+      cache: false,
+      success: function(data){
+        console.log(JSON.stringify(newTodoName));
+        this.getTodos();
 
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log(err);
+      }
+    });
   }
   render() {
     return (
       <div className="App col-xs-12">
         <TodoAdd addProject={this.handleAddTodo.bind(this)}/>
-        <Todo onDelete={this.handleDeleteTodo.bind(this)} todos={this.state.todos} />
-        <button onClick={this.modalAction.bind(this)}/>
-        <TodoModal info={this.state.info} key={this.state.action} active={this.state.action} />
+        <Todo onEdit={this.handleEditTodo.bind(this)} onDelete={this.handleDeleteTodo.bind(this)} todos={this.state.todos} />
       </div>
     );
   }

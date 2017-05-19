@@ -1,16 +1,8 @@
 {
   "todos": [
     {
-      "todoName": "wertwert",
+      "todoName": "",
       "id": 1
-    },
-    {
-      "todoName": "wertwertwertwertwertw",
-      "id": 2
-    },
-    {
-      "todoName": "wertwertwertewrtwetewrt",
-      "id": 3
     }
   ]
 }

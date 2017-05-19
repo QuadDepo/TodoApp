@@ -48,6 +48,7 @@ TodoAdd Styles
 }
 .addForm{
   border-radius: 100px !important;
+  padding-left: 25px;
   padding-top: 25px !important;
   padding-bottom: 25px !important;
 }
@@ -75,11 +76,66 @@ Todo Styles
 .todoItem{
   list-style: none;
   width: 100%;
-  text-align: center;
   background-color: #eee;
   border-radius: 100px;
-  margin-bottom: 10px;
+}
+.todoName{
+  display: inline-block;
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 5px;
+
 }
 .todoItem span{
   line-height: 50px;
+  padding-left: 20px;
+  padding-right: 50px;
+  overflow-x: hidden;
+}
+
+/*
+
+********
+
+TodoModal Styles
+
+********
+
+*/
+.todoModal{
+  z-index: 9999;
+  width: 75%;
+  background-color: white;
+  margin-top: 10%;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.modal-container{
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+}
+.modal-background{
+  background-color: RGBA(119, 185, 200, 0.5);
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.modalText{
+  word-break: break-all
+}
+.btn-activate{
+  margin-top: -55px;
 }

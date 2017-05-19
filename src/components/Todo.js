@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 
 import TodoItem from './TodoItem';
-import TodoCheck from './TodoCheck';
+
 
 
 class Todo extends Component {
   deleteTodo(id, name){
     this.props.onDelete(id, name);
   }
+  editTodo(name, id){
+    this.props.onEdit(name, id);
+  }
   render() {
     let todoItems;
     if (this.props.todos) {
         todoItems = this.props.todos.map(todo => {
           return(
-              <TodoItem onDelete={this.deleteTodo.bind(this)} key={todo.id} todo={todo} />
+              <TodoItem onEdit={this.editTodo.bind(this)} onDelete={this.deleteTodo.bind(this)} key={todo.id} todo={todo} />
           );
         });
     }
