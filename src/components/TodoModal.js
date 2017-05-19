@@ -27,11 +27,15 @@ class TodoModal extends Component {
      updateTodo(name, id){
        this.props.onEdit(name, id);
      }
+     modalDelete(id, name){
+       this.handleClose();
+       this.props.modalDelete(id, name);
+     }
     //  this.deleteTodo.bind(this, this.props.todo.id, this.props.todo.todoName)
    render() {
 
-     return <div className="">
-        <button onClick={this.handleClick} className="pull-right btn-activate btn btn-info btn-circle">
+     return <div className="modal-outer">
+        <button onClick={this.handleClick} className="btn-action-edit btn btn-info">
           <i className="fa fa-gear"></i>
         </button>
        {
@@ -39,9 +43,13 @@ class TodoModal extends Component {
          <div className="modal-container">
          <div onClick={this.handleClose} className="modal-background"></div>
             <div className="todoModal">
+            <div className="inner-modal">
             <p className="modalText">{this.state.todoEdit}</p>
-            <input value={this.state.todoEdit} ref="todoInput" onChange={event => this.setState({todoEdit: event.target.value})} />
-            <button onClick={this.handleClose}>Close</button><button onClick={this.submitEdit.bind(this, this.state.todoEdit, this.props.todo.id)}>submit</button>
+            <input  className="form-control" value={this.state.todoEdit} ref="todoInput" onChange={event => this.setState({todoEdit: event.target.value})} />
+            <button className="close-modal btn btn-danger btn-circle" onClick={this.handleClose}><i className="fa fa-close"></i></button>
+            <button className="btn pull-right btn-success"  onClick={this.submitEdit.bind(this, this.state.todoEdit, this.props.todo.id)}>Edit Modal</button>
+            <button className="btn pull-right btn-danger" onClick={this.modalDelete.bind(this, this.props.todo.id, this.props.todo.TodoName)}>Delete</button>
+            </div>
             </div>
             </div>
        }

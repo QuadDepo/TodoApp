@@ -74,26 +74,41 @@ Todo Styles
 }
 
 .todoItem{
-  list-style: none;
   width: 100%;
+  display: block;
+  line-height: 50px;
   background-color: #eee;
   border-radius: 100px;
-}
-.todoName{
-  display: inline-block;
-  width: 70%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-bottom: 5px;
-
+  margin-top: 10px;
 }
 .todoItem span{
-  line-height: 50px;
   padding-left: 20px;
-  padding-right: 50px;
-  overflow-x: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-
+.todoName{
+  width: 100%;
+  display: inline;
+}
+.btns-actions{
+  float: right;
+}
+.btn-action-done{
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 0%;
+}
+.btn-action-edit{
+  height: 50px;
+  border-radius: 0% 50% 50% 0%;
+  margin-top: -2px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.modal-outer{
+  display: inline-block;
+}
 /*
 
 ********
@@ -113,6 +128,7 @@ TodoModal Styles
   left: 0;
   right: 0;
   margin: auto;
+  border-radius: 10px;
 }
 .modal-container{
   z-index: 2;
@@ -124,7 +140,7 @@ TodoModal Styles
   height: 100%;
 }
 .modal-background{
-  background-color: RGBA(119, 185, 200, 0.5);
+  background-color: RGBA(0, 0, 0, 0.3);
   width: 100% !important;
   height: 100% !important;
   top: 0;
@@ -133,9 +149,18 @@ TodoModal Styles
   z-index: 2;
 }
 
+.btn-action{
+
+}
+
 .modalText{
   word-break: break-all
 }
-.btn-activate{
-  margin-top: -55px;
+.close-modal{
+  position: absolute;
+  right: -20px;;
+  top: -20px;
+}
+.inner-modal{
+  padding: 25px;
 }
