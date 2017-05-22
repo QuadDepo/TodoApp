@@ -1,5 +1,7 @@
 {
+  "TodoApp":{
   "user": {
+    "name": "Ryan George",
     "todos": {
       "done": [
         {
@@ -7,12 +9,12 @@
           "id": 1,
           "time_added": "20-10-17",
           "time_completed": "20-10-17",
-          "week":,
-          "month":,
-          "year":,
+          "week": 21,
+          "month": 12,
+          "year": 2018
         }
       ],
-      "open": [],
+      "open": []
     },
     "stats":{
       "week":{
@@ -21,8 +23,10 @@
       "month":{
 
       },
-      "all-dones":
+      "all-dones": 23
 
     }
   }
+}
+
 }

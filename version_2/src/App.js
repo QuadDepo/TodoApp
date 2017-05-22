@@ -16,14 +16,22 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      todos: [],
-      content: "Damm"
-    }
+      API: [],
+      content: "Home"
+    };
+  this.handleChangeContent = this.handleChangeContent.bind(this);
+
   }
-  getTodos(){
+  handleChangeContent(page){
+    // console.log(page);
+    // console.log(this.state.content);
+    this.setState({content: page})
+
+  };
+  getApi(){
     $.ajax({
       // https://jsonplaceholder.typicode.com/todos
-      url: 'http://localhost:3004/todos',
+      url: 'http://localhost:3004/TodoApp',
       dataType:'json',
       cache: false,
       success: function(data){
@@ -37,19 +45,21 @@ class App extends Component {
     });
   }
   componentWillMount(){
-  this.getTodos();
+  this.getApi();
+      // console.log(this.state.content);
   }
 
   componentDidMount(){
-    this.getTodos();
+    this.getApi();
+
   }
   handleAddTodo(){
-    this.getTodos()
+    this.getApi()
   }
   handleDeleteTodo(id, name){
     $.ajax({
       // https://jsonplaceholder.typicode.com/todos
-      url: 'http://localhost:3004/todos/' + id,
+      url: 'http://localhost:3004/TodoApp/' + id,
       type: 'DELETE',
       dataType:'json',
       cache: false,
@@ -57,7 +67,7 @@ class App extends Component {
         console.log(data + " #"+id);
         console.log("de todo was" + name);
         $("#"+id).slideUp(300, () => {
-                this.getTodos();
+                this.getApi();
         });
 
       }.bind(this),
@@ -80,7 +90,7 @@ class App extends Component {
       cache: false,
       success: function(data){
         console.log(JSON.stringify(newTodoName));
-        this.getTodos();
+        this.getApi();
 
       }.bind(this),
       error: function(xhr, status, err){
@@ -88,17 +98,12 @@ class App extends Component {
       }
     });
   }
-  handleChangeContent(page){
-    console.log(page);
-    // console.log(this.state.content);
-    this.setState({content: page})
 
-  }
   render() {
     return (
       <div className="App">
         <Content getContent={this.state.content} />
-        <Menu changeContent={this.handleChangeContent.bind(this)} />
+        <Menu changeContent={this.handleChangeContent} />
       </div>
     );
   }

@@ -1,36 +1,31 @@
 import React,{Component} from 'react';
-import ReactDOM from 'react-dom';
+import TodoAdd from '../todo/TodoAdd';
+
 
 class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayCom: ''
+
     }
 
   };
-  componentDidMount(){
-    this.setState({displayCom: this.props.getContent});
-    console.log(this.state.displayCom);
-  }
-  componentDidMount(){
-    this.setState({displayCom: this.props.getContent});
-    console.log(this.state.displayCom);
-  }
+
 
 
   render(){
     let com = null;
-    if (this.state.displayCom == 'Damm') {
-      com = <h1>{this.props.getContent}</h1>
-    }else if (this.state.displayCom === 'Add') {
-      com = <h1>Add</h1>
+    let getContent = this.props.getContent;
+    console.log(getContent);
+    if (getContent === 'Home') {
+        com = <div>this is home</div>
+    }else if (getContent === 'Add') {
+        com = <TodoAdd />
     }
+
     return(
-      <div ref="comp">
-      hoi
+      <div className="col-xs-10 col-xs-offset-1">
       {com}
-      {this.props.getContent}
       </div>
     )
   }

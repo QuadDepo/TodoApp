@@ -10,50 +10,45 @@ App Styles
 
 html, body{
   height: 100%;
+  width: 100%;
 }
 .container, .App{
   height: 100%;
 }
 
-
-.App{
-}
-.btn-circle {
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
-
-  line-height: 1.428571429;
-  border-radius: 50% !important;
-}
-.btn-circle i{
-  font-size: 2em;
-}
-
-
-.react-draggable-dragged{
-  width: 50px !important;
-}
-
-
-.btn-drag{
-}
-
-.Menu{
+.row.Menu{
   position: fixed;
   bottom: 0;
   width: 100%;
-
+  margin: 0;
   height: 50px;
   background-color: #eee
 }
-
+.Menu > .col-xs-4{
+  padding: 0;
+}
 .menu-item{
   display: block;
   font-size: 1.5em;
   text-align: center;
   line-height: 50px;
-  color:RGBA(17, 138, 20, 1.00)
+  padding: 0;
+  color:#34495e
+}
+.active i{
+  color: #27ae60;
+}
+
+.menu-item:focus i, .menu-item:hover i{
+  color: #27ae60;
+}
+.TodoAdd{
+  margin-top: 20px;
+  padding: 10px;
+  -webkit-box-shadow: -2px 0px 33px 1px rgba(0,0,0,0.3);
+-moz-box-shadow: -2px 0px 33px 1px rgba(0,0,0,0.3);
+box-shadow: -2px 0px 33px 1px rgba(0,0,0,0.3);
+}
+.TodoAdd h3{
+  margin:0;
 }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import $ from 'jquery';
 class Menu extends Component {
   constructor(props) {
     super(props)
@@ -8,32 +8,42 @@ class Menu extends Component {
         {
           id: 1,
           name: "Home",
-          icon: "fa fa-list-ul"
+          icon: "fa fa-list-ul",
+          active: true
         },
         {
           id: 2,
           name: "Add",
-          icon: "fa fa-plus"
+          icon: "fa fa-plus-circle",
+          active: false
         },
         {
           id: 3,
           name: "Stats",
-          icon: "fa fa-bar-chart"
+          icon: "fa fa-bar-chart",
+          active: false
         },
       ],
       itemActive: 'Home'
     }
   }
-
-  onChangeContent(page){
+  componentDidMount(){
+    $('#1').addClass('active');
+  }
+  onChangeContent(page, active, id){
+    $('.active').removeClass('active');
     this.props.changeContent(page);
+    $('#'+id).addClass('active');
+
   }
   render(){
     let menui;
+
+
     menui = this.state.menuItems.map(menu => {
       return(
-        <div key={menu.id} className="col-xs-4">
-          <a onClick={this.onChangeContent.bind(this, menu.name)} className="menu-item">
+        <div id={menu.id} key={menu.id} className="col-xs-4">
+          <a onClick={this.onChangeContent.bind(this, menu.name, menu.active , menu.id)} className="menu-item">
             <i className={menu.icon}></i>
           </a>
         </div>
