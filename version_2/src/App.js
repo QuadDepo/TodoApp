@@ -16,7 +16,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      API: [],
+      api: [],
       content: "Home"
     };
   this.handleChangeContent = this.handleChangeContent.bind(this);
@@ -35,8 +35,8 @@ class App extends Component {
       dataType:'json',
       cache: false,
       success: function(data){
-        this.setState({todos: data}, function(){
-          console.log(this.state);
+        this.setState({api: data}, function(){
+          // console.log(this.state);
         });
       }.bind(this),
       error: function(xhr, status, err){
@@ -102,7 +102,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Content getContent={this.state.content} />
+        <Content api={this.state.api} getContent={this.state.content} />
         <Menu changeContent={this.handleChangeContent} />
       </div>
     );

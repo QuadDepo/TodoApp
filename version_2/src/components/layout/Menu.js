@@ -19,8 +19,8 @@ class Menu extends Component {
         },
         {
           id: 3,
-          name: "Stats",
-          icon: "fa fa-bar-chart",
+          name: "Profile",
+          icon: "fa fa-user",
           active: false
         },
       ],
