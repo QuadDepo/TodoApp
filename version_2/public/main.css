@@ -8,24 +8,16 @@ App Styles
 
 */
 
-
-.App{
-  margin-top: 50px;
+html, body{
+  height: 100%;
+}
+.container, .App{
+  height: 100%;
 }
 
 
-
-
-/*
-
-********
-
-TodoAdd Styles
-
-********
-
-*/
-
+.App{
+}
 .btn-circle {
   width: 50px;
   height: 50px;
@@ -40,127 +32,28 @@ TodoAdd Styles
   font-size: 2em;
 }
 
-.addBtn{
-  width: 60px;
-  height: 60px;
-  margin-left: -40px !important;
-    margin-top: -5px;
-}
-.addForm{
-  border-radius: 100px !important;
-  padding-left: 25px;
-  padding-top: 25px !important;
-  padding-bottom: 25px !important;
-}
-.addForm:focus{
-  z-index: 0 !important;
+
+.react-draggable-dragged{
+  width: 50px !important;
 }
 
 
-
-
-/*
-
-********
-
-Todo Styles
-
-********
-
-*/
-.Todo ul{
-  margin-top: 50px;
-  padding-left: 0;
+.btn-drag{
 }
 
-.todoItem{
-  width: 100%;
-  display: block;
-  line-height: 50px;
-  background-color: #eee;
-  border-radius: 100px;
-  margin-top: 10px;
-}
-.todoItem span{
-  padding-left: 20px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.todoName{
-  width: 100%;
-  display: inline;
-}
-.btns-actions{
-  float: right;
-}
-.btn-action-done{
-  height: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 0%;
-}
-.btn-action-edit{
-  height: 50px;
-  border-radius: 0% 50% 50% 0%;
-  margin-top: -2px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.modal-outer{
-  display: inline-block;
-}
-/*
-
-********
-
-TodoModal Styles
-
-********
-
-*/
-.todoModal{
-  z-index: 9999;
-  width: 75%;
-  background-color: white;
-  margin-top: 10%;
-  position: absolute;
-  top: 10%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  border-radius: 10px;
-}
-.modal-container{
-  z-index: 2;
+.Menu{
   position: fixed;
+  bottom: 0;
   width: 100%;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 100%;
-}
-.modal-background{
-  background-color: RGBA(0, 0, 0, 0.3);
-  width: 100% !important;
-  height: 100% !important;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 2;
+
+  height: 50px;
+  background-color: #eee
 }
 
-.btn-action{
-
-}
-
-.modalText{
-  word-break: break-all
-}
-.close-modal{
-  position: absolute;
-  right: -20px;;
-  top: -20px;
-}
-.inner-modal{
-  padding: 25px;
+.menu-item{
+  display: block;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 50px;
+  color:RGBA(17, 138, 20, 1.00)
 }

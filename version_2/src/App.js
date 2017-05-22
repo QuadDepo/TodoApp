@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
-import './App.css';
 
-import Todo from './components/Todo'
-import TodoAdd from './components/TodoAdd'
+
+// import Todo from './components/Todo'
+// import TodoAdd from './components/TodoAdd'
+import Menu  from './components/layout/Menu';
+import Content from './components/layout/Content';
+
 
 
 
@@ -14,6 +17,7 @@ class App extends Component {
     super(props);
     this.state = {
       todos: [],
+      content: "Damm"
     }
   }
   getTodos(){
@@ -84,11 +88,17 @@ class App extends Component {
       }
     });
   }
+  handleChangeContent(page){
+    console.log(page);
+    // console.log(this.state.content);
+    this.setState({content: page})
+
+  }
   render() {
     return (
-      <div className="App col-xs-12">
-        <TodoAdd addProject={this.handleAddTodo.bind(this)}/>
-        <Todo onEdit={this.handleEditTodo.bind(this)} onDelete={this.handleDeleteTodo.bind(this)} todos={this.state.todos} />
+      <div className="App">
+        <Content getContent={this.state.content} />
+        <Menu changeContent={this.handleChangeContent.bind(this)} />
       </div>
     );
   }
