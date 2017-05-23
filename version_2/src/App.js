@@ -36,7 +36,7 @@ class App extends Component {
       cache: false,
       success: function(data){
         this.setState({api: data}, function(){
-          // console.log(this.state);
+          console.log(this.state.api);
         });
       }.bind(this),
       error: function(xhr, status, err){
@@ -102,7 +102,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Content api={this.state.api} getContent={this.state.content} />
+        <Content getInfo={this.state.api} getContent={this.state.content} />
         <Menu changeContent={this.handleChangeContent} />
       </div>
     );

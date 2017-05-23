@@ -12,8 +12,9 @@ class User extends Component {
     return(
       <div>
       name: {this.props.userInfo.user.name}
-      <img src={this.props.userInfo.user.user_img} />
+      <img onClick={this.changeUser} className="img-responsive img-circle" src={this.props.userInfo.user.user_img} />
       </div>
+
     )
   }
 }

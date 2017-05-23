@@ -3,24 +3,226 @@
   "user": {
     "name": "Ryan George",
     "user_img": "https://scontent.xx.fbcdn.net/v/t1.0-9/13781798_1232508493465992_4963675344665057950_n.jpg?oh=652a57b423ae406c5d022323e50c5a32&oe=599D42C7",
-    "todos": {
-      "done": [
-        {
-          "todoName": "Hallo",
-          "id": 1,
-          "time_added": "20-10-17",
-          "time_completed": "20-10-17",
-          "week": 21,
-          "month": 12,
-          "year": 2018
-        }
-      ],
-      "open": []
-    },
+    "Todos":[
+      {
+        "todoName": "hllo"
+      }
+    ],
     "stats":{
-      "week":{
-
+      "week": [
+      {
+        "id": 0,
+        "todosDone": 3
       },
+      {
+        "id": 1,
+        "todosDone": 3
+      },
+      {
+        "id": 2,
+        "todosDone": 3
+      },
+      {
+        "id": 3,
+        "todosDone": 3
+      },
+      {
+        "id": 4,
+        "todosDone": 3
+      },
+      {
+        "id": 5,
+        "todosDone": 3
+      },
+      {
+        "id": 6,
+        "todosDone": 3
+      },
+      {
+        "id": 7,
+        "todosDone": 3
+      },
+      {
+        "id": 8,
+        "todosDone": 3
+      },
+      {
+        "id": 9,
+        "todosDone": 3
+      },
+      {
+        "id": 10,
+        "todosDone": 3
+      },
+      {
+        "id": 11,
+        "todosDone": 3
+      },
+      {
+        "id": 12,
+        "todosDone": 3
+      },
+      {
+        "id": 13,
+        "todosDone": 3
+      },
+      {
+        "id": 14,
+        "todosDone": 3
+      },
+      {
+        "id": 15,
+        "todosDone": 3
+      },
+      {
+        "id": 16,
+        "todosDone": 3
+      },
+      {
+        "id": 17,
+        "todosDone": 3
+      },
+      {
+        "id": 18,
+        "todosDone": 3
+      },
+      {
+        "id": 19,
+        "todosDone": 3
+      },
+      {
+        "id": 20,
+        "todosDone": 3
+      },
+      {
+        "id": 21,
+        "todosDone": 3
+      },
+      {
+        "id": 22,
+        "todosDone": 3
+      },
+      {
+        "id": 23,
+        "todosDone": 3
+      },
+      {
+        "id": 24,
+        "todosDone": 3
+      },
+      {
+        "id": 25,
+        "todosDone": 3
+      },
+      {
+        "id": 26,
+        "todosDone": 3
+      },
+      {
+        "id": 27,
+        "todosDone": 3
+      },
+      {
+        "id": 28,
+        "todosDone": 3
+      },
+      {
+        "id": 29,
+        "todosDone": 3
+      },
+      {
+        "id": 30,
+        "todosDone": 3
+      },
+      {
+        "id": 31,
+        "todosDone": 3
+      },
+      {
+        "id": 32,
+        "todosDone": 3
+      },
+      {
+        "id": 33,
+        "todosDone": 3
+      },
+      {
+        "id": 34,
+        "todosDone": 3
+      },
+      {
+        "id": 35,
+        "todosDone": 3
+      },
+      {
+        "id": 36,
+        "todosDone": 3
+      },
+      {
+        "id": 37,
+        "todosDone": 3
+      },
+      {
+        "id": 38,
+        "todosDone": 3
+      },
+      {
+        "id": 39,
+        "todosDone": 3
+      },
+      {
+        "id": 40,
+        "todosDone": 3
+      },
+      {
+        "id": 41,
+        "todosDone": 3
+      },
+      {
+        "id": 42,
+        "todosDone": 3
+      },
+      {
+        "id": 43,
+        "todosDone": 3
+      },
+      {
+        "id": 44,
+        "todosDone": 3
+      },
+      {
+        "id": 45,
+        "todosDone": 3
+      },
+      {
+        "id": 46,
+        "todosDone": 3
+      },
+      {
+        "id": 47,
+        "todosDone": 3
+      },
+      {
+        "id": 48,
+        "todosDone": 3
+      },
+      {
+        "id": 49,
+        "todosDone": 3
+      },
+      {
+        "id": 50,
+        "todosDone": 3
+      },
+      {
+        "id": 51,
+        "todosDone": 3
+      },
+      {
+        "id": 52,
+        "todosDone": 3
+      }
+    ],
       "month":{
 
       },
