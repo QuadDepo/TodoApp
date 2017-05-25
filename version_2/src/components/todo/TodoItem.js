@@ -12,6 +12,7 @@ class TodoItem extends Component {
     return(
       <li>
         {this.props.todo.todoName}
+
       </li>
     )
   }

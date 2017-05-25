@@ -12,10 +12,6 @@
     "stats":{
       "week": [
       {
-        "id": 0,
-        "todosDone": 3
-      },
-      {
         "id": 1,
         "todosDone": 3
       },
@@ -224,9 +220,56 @@
         "todosDone": 3
       }
     ],
-      "month":{
-
-      },
+      "month":[
+        {
+          "id": 1,
+          "todosDone": 3
+        },
+        {
+          "id": 2,
+          "todosDone": 3
+        },
+        {
+          "id": 3,
+          "todosDone": 3
+        },
+        {
+          "id": 4,
+          "todosDone": 3
+        },
+        {
+          "id": 5,
+          "todosDone": 3
+        },
+        {
+          "id": 6,
+          "todosDone": 3
+        },
+        {
+          "id": 7,
+          "todosDone": 3
+        },
+        {
+          "id": 8,
+          "todosDone": 3
+        },
+        {
+          "id": 9,
+          "todosDone": 3
+        },
+        {
+          "id": 10,
+          "todosDone": 3
+        },
+        {
+          "id": 11,
+          "todosDone": 3
+        },
+        {
+          "id": 12,
+          "todosDone": 3
+        }
+      ],
       "all-dones": 23
 
     }
