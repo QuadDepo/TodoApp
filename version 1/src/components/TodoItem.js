@@ -7,7 +7,7 @@ class TodoItem extends Component {
   }
   editTodo(name, id){
       this.props.onEdit(name, id);
-    }
+  }
   render() {
     return (
         <li id={this.props.todo.id} className="todoItem">
