@@ -11,9 +11,12 @@ class TodoItem extends Component {
   render(){
     return(
       <li>
-        {this.props.todo.done}
+        {this.props.todo.todoName}
       </li>
     )
   }
 
 }
+
+
+export default TodoItem
